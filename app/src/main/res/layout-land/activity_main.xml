@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:baselineAligned="false">
+
+    <TextView
+            android:id="@+id/time_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textColor="#FFF"
+            android:textSize="180sp"
+            android:translationY="-20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/time_lap"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="#FF0"
+            android:textSize="100sp"
+            android:translationY="-60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_view" />
+
+    <TextView
+            android:id="@+id/last_lap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#FF0"
+            android:textSize="730sp"
+            android:translationY="-70sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/time_view" />
+
+    <Button
+            android:id="@+id/reset_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="200sp"
+            android:height="100sp"
+            android:onClick="onClickReset"
+            android:text="@string/reset"
+            android:textSize="40sp"
+            android:translationY="-15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/stop_button"
+            app:layout_constraintTop_toBottomOf="@+id/time_lap" />
+
+    <Button
+            android:id="@+id/lap_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="200sp"
+            android:height="100sp"
+            android:onClick="onClickLap"
+            android:text="@string/lap"
+            android:textSize="40sp"
+            android:translationY="-15dp"
+            app:layout_constraintEnd_toStartOf="@+id/stop_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/start_button"
+            app:layout_constraintTop_toBottomOf="@+id/time_lap" />
+
+    <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="200sp"
+            android:height="100sp"
+            android:onClick="onClickStart"
+            android:text="@string/start"
+            android:textColor="#070"
+            android:textSize="40sp"
+            android:translationY="-15dp"
+            app:layout_constraintEnd_toStartOf="@+id/lap_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_lap" />
+
+    <Button
+            android:id="@+id/stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="200sp"
+            android:height="100sp"
+            android:onClick="onClickStop"
+            android:text="@string/stop"
+            android:textColor="#F00"
+            android:textSize="40sp"
+            android:translationY="-15dp"
+            app:layout_constraintEnd_toStartOf="@+id/reset_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lap_button"
+            app:layout_constraintTop_toBottomOf="@+id/time_lap" />
+
+    <Button
+            android:id="@+id/show_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="300sp"
+            android:height="100sp"
+            android:onClick="onClickShow"
+            android:text="@string/show"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stop_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
